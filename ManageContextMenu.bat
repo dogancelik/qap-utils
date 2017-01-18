@@ -38,13 +38,16 @@ set "reg6=Add Folder to Quick Access Popup menu Express"
 set "sep=========================="
 
 echo Welcome to Quick Access Popup Context Menu Manager!
+echo (this batch must run as administrator)
 echo %sep%
 echo 1) Install QAP context menu items
 echo 2) Uninstall QAP context menu items
+echo 0) Exit
 echo %sep%
 
-choice /C 12 /M "Enter your choice:"
+choice /C 120 /M "Enter your choice:"
 
+if errorlevel 3 goto end
 if errorlevel 2 goto uninstall
 if errorlevel 1 goto install
 goto end
