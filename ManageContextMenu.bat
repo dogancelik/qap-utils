@@ -22,6 +22,7 @@
 :: HISTORY
 :: 2017-01-17 Initial release
 :: 2017-07-15 Add the context menu "Import Windows shortcut to Quick Access Popup menu"
+:: 2018-12-04 Use Local Machine instead of Classes Root for Shortcut files
 ::
 :: -----------------------------------------------------------------------
 :: 
@@ -31,6 +32,7 @@ set "reg_wildcard=HKEY_CLASSES_ROOT\*\shell\"
 set "reg_desktop_bg=HKEY_CLASSES_ROOT\DesktopBackground\Shell\"
 set "reg_dir_bg=HKEY_CLASSES_ROOT\Directory\Background\shell\"
 set "reg_folder=HKEY_CLASSES_ROOT\Folder\shell\"
+:: For lnk files, use HKEY_LOCAL_MACHINE\SOFTWARE\Classes\, not HKEY_CLASSES_ROOT\
 set "reg_lnkfile=HKEY_LOCAL_MACHINE\SOFTWARE\Classes\lnkfile\shell\"
 
 set "reg1=Add File to Quick Access Popup menu"
@@ -39,7 +41,7 @@ set "reg3=Show Quick Access Popup menu"
 set "reg4=Show Quick Access Popup Alternative menu"
 set "reg5=Add Folder to Quick Access Popup menu"
 set "reg6=Add Folder to Quick Access Popup menu Express"
-set "reg7=Import Windows shortcut to Quick Access Popup menu"
+set "reg7=Import Shortcut to Quick Access Popup menu"
 
 set "sep=========================="
 
